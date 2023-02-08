@@ -8,20 +8,15 @@ const Stars = ({ stars, reviews }) => {
     const number = index + 0.5
     return (
       <span key={index}>
-        {stars > number ? (
-          <BsStarFill />
-        ) : stars > index ? (
-          <BsStarHalf />
-        ) : (
-          <BsStar />
-        )}
+        
       </span>
     )
   })
   return (
     <div className='star-container'>
-      <div>{tempStars}</div>
-      <p className='reviews'>({reviews} customer reviews)</p>
+      {/**
+       * TODO
+       */}
     </div>
   )
 }
