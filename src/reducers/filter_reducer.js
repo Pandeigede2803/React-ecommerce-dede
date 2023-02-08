@@ -24,7 +24,9 @@ const filter_reducer = (state, action) => {
     return { ...state, grid_view: true }
   }
   if (action.type === SET_LISTVIEW) {
-    return { ...state, grid_view: false }
+    /**
+    * TODO
+    */
   }
   if (action.type === UPDATE_SORT) {
     return { ...state, sort: action.payload }
@@ -34,27 +36,19 @@ const filter_reducer = (state, action) => {
     let tempProducts = []
     if (sort === 'price-lowest') {
       tempProducts = filtered_products.sort((a, b) => {
-        // if (a.price < b.price) {
-        //   return -1
-        // }
-        // if (a.price > b.price) {
-        //   return 1
-        // }
-        // return 0
-        return a.price - b.price
+        if (a.price < b.price) {
+           return -1
+        }
+        if (a.price > b.price) {
+           return 1
+        }
+        return 0
       })
     }
     if (sort === 'price-highest') {
-      tempProducts = filtered_products.sort((a, b) => {
-        // if (b.price < a.price) {
-        //   return -1
-        // }
-        // if (b.price > a.price) {
-        //   return 1
-        // }
-        // return 0
-        return b.price - a.price
-      })
+      /**
+       * TODO
+       */
     }
     if (sort === 'name-a') {
       tempProducts = filtered_products.sort((a, b) => {
@@ -62,9 +56,9 @@ const filter_reducer = (state, action) => {
       })
     }
     if (sort === 'name-z') {
-      tempProducts = filtered_products.sort((a, b) => {
-        return b.name.localeCompare(a.name)
-      })
+      /**
+       * TODO
+       */
     }
 
     return { ...state, filtered_products: tempProducts }
@@ -88,20 +82,26 @@ const filter_reducer = (state, action) => {
       )
     }
     if (company !== 'all') {
-      tempProducts = tempProducts.filter(
-        (product) => product.company === company
-      )
+      /**
+       * TODO
+       */
     }
     if (color !== 'all') {
-      tempProducts = tempProducts.filter((product) => {
-        return product.colors.find((c) => c === color)
-      })
+      /**
+       * TODO
+       */
     }
+    
     // filter by price
-    tempProducts = tempProducts.filter((product) => product.price <= price)
+    /**
+    * TODO
+    */
+    
     // filter by shipping
     if (shipping) {
-      tempProducts = tempProducts.filter((product) => product.shipping === true)
+      /**
+       * TODO
+       */
     }
     return { ...state, filtered_products: tempProducts }
   }
