@@ -6,11 +6,13 @@
 }
 
   
-a {
+.section-hero a {
+
     color: var(--clr-primary-3);
     padding: 0.5rem;
     transition: var(--transition);
 }
-a:hover {
+
+.section-hero a:hover {
     color: var(--clr-primary-1);
 }

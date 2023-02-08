@@ -1,7 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
 import { BsStarFill, BsStarHalf, BsStar } from 'react-icons/bs'
 import './stars.css'
+
 
 const Stars = ({ stars, reviews }) => {
   const tempStars = Array.from({ length: 5 }, (_, index) => {
@@ -19,11 +19,12 @@ const Stars = ({ stars, reviews }) => {
     )
   })
   return (
-    <div className='stars-container'>
-      <div className='stars'>{tempStars}</div>
+    <div className='star-container'>
+      <div>{tempStars}</div>
       <p className='reviews'>({reviews} customer reviews)</p>
     </div>
   )
 }
+
 
 export default Stars

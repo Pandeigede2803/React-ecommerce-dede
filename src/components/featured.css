@@ -1,7 +1,8 @@
-.section {
+.section-featured {
     background: #FD7F32;
     padding: 1rem 2rem;
 }
+
 .featured {
   margin: 4rem auto;
   display: grid;
@@ -23,3 +24,4 @@
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   }
 }
+

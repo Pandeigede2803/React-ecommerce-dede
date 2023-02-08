@@ -31,7 +31,7 @@ p {
     color: #000000;  
 }
 
-span {
+.service span {
     width: 4rem;
     height: 4rem;
     display: grid;
@@ -43,7 +43,7 @@ span {
     color: var(--clr-primary-1);
 }
 
-span svg {
+.service span svg {
     font-size: 2rem;
 }
 

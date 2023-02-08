@@ -8,7 +8,7 @@ const Sort = () => {
   /***use the context***/
 
   return (
-    <section>
+    <div className='section-sort'>
       <div className='btn-container'>
         {/** add button gridview and listview, 
          *   use the imported icon above 
@@ -29,7 +29,7 @@ const Sort = () => {
          */}
           
       </form>
-    </section>
+    </div>
   )
 }
 
