@@ -36,7 +36,9 @@ export const CartProvider = ({ children }) => {
 
   // remove item
   const removeItem = (id) => {
-    dispatch({ type: REMOVE_CART_ITEM, payload: id })
+    /**
+     * TODO
+     */
   }
 
   // toggle amount

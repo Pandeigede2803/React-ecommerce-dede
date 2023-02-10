@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import CartColumns from './CartColumns'
 import CartItem from './CartItem'
 import CartTotals from './CartTotals'
+import './carcontent.scss'
 const CartItems = () => {
   const { cart, clearCart } = useCartContext()
 

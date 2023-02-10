@@ -48,6 +48,7 @@
     ]
   },
   "devDependencies": {
-    "netlify-cli": "^12.1.0"
+    "netlify-cli": "^12.1.0",
+    "saas": "^1.0.0"
   }
 }
