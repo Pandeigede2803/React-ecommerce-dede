@@ -6,7 +6,7 @@ import './pagehero.css'
 const PageHero = ({ title, product }) => {
   return (
     <div className='section-hero'>
-      <div className='section-center'>
+      <div className="section">
         <h3>
           <Link to='/'>Home </Link>
           {product && <Link to='/products'>/ Products</Link>}/ {title}

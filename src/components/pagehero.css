@@ -1,8 +1,22 @@
 .section-hero{
-    background: #e2d5e2;
+    background: var(--clr-primary-10);
     width: 100%;
+    min-height: 20vh;
     display: flex;
-    align-items: center;  
+    -webkit-box-align: center;
+    align-items: center;
+    /* color: var(--clr-primary-1); */
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.section {
+    margin:0px 10%;
+    /* max-width: 1170px; */
+    max-width: var(--max-width);
+    /* width: 90vw; */
+    background: none;
+
 }
 
   

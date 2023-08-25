@@ -4,6 +4,8 @@ Variables
 ===============
 */
 
+
+
 :root {
   /* dark shades of primary color*/
   --clr-primary-1: hsl(22, 28%, 21%);
@@ -84,10 +86,17 @@ h5 {
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
+  
+}
+
+h1 {
+  font-size: 10rem;
 }
 h1 {
-  font-size: 2.5rem;
+  font-family: 'Your Sans-serif Font', sans-serif;
+  /* You can specify your desired sans-serif font or use a generic sans-serif fallback */
 }
+
 h2 {
   font-size: 2rem;
 }

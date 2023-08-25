@@ -1,0 +1,15 @@
+
+.submit-btn {
+            background: var(--clr-primary-5);
+            text-transform: capitalize;
+            letter-spacing: var(--spacing);
+            cursor: pointer;
+            transition: var(--transition);
+            color: var(--clr-black);
+            width: auto;
+            height: auto;
+        }
+
+.h3 {
+    font-size: 3em ;
+}

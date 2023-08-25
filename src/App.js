@@ -20,6 +20,10 @@ function App() {
         <Sidebar />
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/Products' element={<Products />} />
+          <Route path='/SingleProductPage' element={<SingleProduct />} />
+          <Route path='/CheckoutPage' element={<Checkout />} />
           {/* 
           TODO :
           Route to 

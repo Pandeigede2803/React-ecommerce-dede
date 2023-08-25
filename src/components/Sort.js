@@ -10,9 +10,8 @@ const Sort = () => {
   return (
     <div className='section-sort'>
       <div className='btn-container'>
-        {/** add button gridview and listview, 
-         *   use the imported icon above 
-         */}
+        {BsFillGridFill}
+        {BsList}
       </div>
       <p>
         {/** add info number of products found */}

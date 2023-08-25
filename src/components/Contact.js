@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import "./contact.css"
+
 const Contact = () => {
   return (
     <Wrapper>
@@ -28,6 +30,8 @@ const Wrapper = styled.section`
   padding: 5rem 0;
   h3 {
     text-transform: none;
+    font-size: 2em;
+    font-weight: bold;
   }
   p {
     line-height: 2;

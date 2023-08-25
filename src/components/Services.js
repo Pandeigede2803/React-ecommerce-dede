@@ -1,13 +1,29 @@
-import React from 'react'
-import { services } from '../utils/constants'
-import './services.css'
+import React from "react";
+import { services } from "../utils/constants";
+import "./services.css";
 
 const Services = () => {
   return (
-    <div>
-      {/* CALL array services from constant.js */}
-    </div>
-  )
-}
+    <div className="section-center">
+      <article className="header">
+      <h3 className="h3">Produk Custom <br/>Sesuai Keinginan Kamu</h3></article>
+      <div className="services-center">
+        {services.map((servis) => (
+          <article className="service">
+            <span className="icon">{servis.icon}</span>
+            <h4>
+              {servis.title}
+            </h4>
+            <p>{servis.text}</p>
+          </article>
+        ))}
+      </div>
 
-export default Services
+      {/* {services.map((product) => (
+            
+          ))} */}
+    </div>
+  );
+};
+
+export default Services;

@@ -10,7 +10,7 @@ const Hero = () => {
         <h1>
           Cek Toko Sebelah <br />
           Murah Aman Asli
-        </h1>
+        </h1> 
         <p>
           Belanja fashion sehari-hari disini pasti murah, aman dan asli. Cek toko sebelah tersedia di kota-kota besar indonesia.
         </p>
@@ -32,6 +32,16 @@ const Wrapper = styled.section`
   place-items: center;
   .img-container {
     display: none;
+  }
+  h1 {
+    font-family: 'Your Preferred Font',; /* Set your preferred font */
+    display: block;
+    font-size: 3em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
   }
 
   p {
@@ -69,9 +79,10 @@ const Wrapper = styled.section`
     }
     .accent-img {
       position: absolute;
-      bottom: 0;
-      left: 0;
+      bottom: 0px;
+      left: 0px;
       width: 250px;
+      height: auto;
       transform: translateX(-50%);
       border-radius: var(--radius);
     }

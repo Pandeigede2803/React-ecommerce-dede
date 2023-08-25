@@ -1,11 +1,27 @@
-h3,h4 {
+
+
+
+h4 {
     color: #FD7F32;
+    font-weight:bolder;
+    font-size: x-small;
+}
+.h3{
+    color: #FD7F32;
+    font-weight:bolder;
+    font-size: 3.5em;
+    
+
 }
 
 .section-center{
     padding: 5rem 0;
 
     background: #EAD9EB;
+    margin: 0 auto;
+    /* max-width: 1170px; */
+    max-width: var(--max-width);
+    /* width: 90vw; */
 }
 
 p {
