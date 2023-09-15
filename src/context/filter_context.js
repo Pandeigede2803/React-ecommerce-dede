@@ -12,6 +12,7 @@ import {
 } from '../actions'
 import { useProductsContext } from './products_context'
 
+// Nilai awal state untuk konteks filter
 const initialState = {
   filtered_products: [],
   all_products: [],
@@ -29,20 +30,26 @@ const initialState = {
   },
 }
 
+// Membuat konteks FilterContext
 const FilterContext = React.createContext()
 
+// Provider untuk konteks filter
 export const FilterProvider = ({ children }) => {
   const { products } = useProductsContext()
   const [state, dispatch] = useReducer(reducer, initialState)
+
+  // Memuat produk dari konteks produk
   useEffect(() => {
     dispatch({ type: LOAD_PRODUCTS, payload: products })
   }, [products])
 
+  // Menggunakan efek samping untuk memfilter dan mengurutkan produk saat ada perubahan dalam state sort dan filters
   useEffect(() => {
     dispatch({ type: FILTER_PRODUCTS })
     dispatch({ type: SORT_PRODUCTS })
   }, [state.sort, state.filters])
-  // functions
+
+  // Fungsi-fungsi untuk mengatur tampilan, mengubah urutan, mengubah filter, dan menghapus filter
   const setGridView = () => {
     dispatch({ type: SET_GRIDVIEW })
   }
@@ -73,6 +80,7 @@ export const FilterProvider = ({ children }) => {
   const clearFilters = () => {
     dispatch({ type: CLEAR_FILTERS })
   }
+
   return (
     <FilterContext.Provider
       value={{
@@ -89,7 +97,7 @@ export const FilterProvider = ({ children }) => {
   )
 }
 
-
+// Fungsi untuk menggunakan konteks filter
 export const useFilterContext = () => {
   return useContext(FilterContext)
 }

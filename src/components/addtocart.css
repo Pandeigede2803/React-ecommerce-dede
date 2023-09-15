@@ -10,6 +10,13 @@
     margin-bottom: 1rem;
 
 }
+/* .addtocart .colors-btn {
+    display: grid;
+    grid-template-columns: 125px 1fr;
+    align-items: center;
+    margin-bottom: 1rem;
+
+} */
 
 .colors span {
     text-transform: capitalize;
@@ -18,8 +25,9 @@
 
 .colors div {
     display: flex;
+    flex-direction: row;
 }
-  
+
 .addtocart .color-btn {
     display: inline-block;
     width: 1.5rem;
@@ -35,11 +43,27 @@
     justify-content: center;
     
 }
-
-.color-btn svg {
-    font-size: 0.75rem;
-    color: var(--clr-white);
-}
+.FaCheck {
+    color:white; /* Change this to your desired color */
+  }
+/* .color-btn {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #222;
+    margin-right: 0.5rem;
+    border: none;
+    cursor: pointer;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      font-size: 0.5rem;
+      color: var(--clr-white);
+    }
+} */
 
 .addtocart .active {
     opacity: 1;
@@ -53,3 +77,8 @@
     margin-top: 1rem;
     width: 140px;
 }
+
+
+
+
+

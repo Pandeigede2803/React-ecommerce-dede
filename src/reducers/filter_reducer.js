@@ -24,9 +24,7 @@ const filter_reducer = (state, action) => {
     return { ...state, grid_view: true }
   }
   if (action.type === SET_LISTVIEW) {
-    /**
-    * TODO
-    */
+    return { ...state, grid_view: false }
   }
   if (action.type === UPDATE_SORT) {
     return { ...state, sort: action.payload }
@@ -46,6 +44,15 @@ const filter_reducer = (state, action) => {
       })
     }
     if (sort === 'price-highest') {
+      tempProducts = filtered_products.sort((a, b) => {
+        if (a.price > b.price) {
+           return -1
+        }
+        if (a.price < b.price) {
+           return 1
+        }
+        return 0
+      })
       /**
        * TODO
        */
@@ -56,6 +63,9 @@ const filter_reducer = (state, action) => {
       })
     }
     if (sort === 'name-z') {
+      tempProducts = filtered_products.sort((a, b) => {
+        return b.name.localeCompare(a.name)
+      })
       /**
        * TODO
        */
@@ -82,27 +92,40 @@ const filter_reducer = (state, action) => {
       )
     }
     if (company !== 'all') {
+      tempProducts = tempProducts.filter(
+        (product) => product.company === company
+      )
+
+
       /**
        * TODO
        */
     }
     if (color !== 'all') {
-      /**
-       * TODO
-       */
+      tempProducts = tempProducts.filter((product) => {
+        console.log(`Product color: ${product.colors}, Filter color: ${color}`)
+        // Add your color filtering logic here
+        // For example, if 'color' is a property in each product:
+        // return product.colors === color;
+        return product.colors.includes(color);
+      });
     }
-    
-    // filter by price
-    /**
-    * TODO
-    */
+    if (price !== 'all') {
+      tempProducts = tempProducts.filter((product) => {
+        // Add your price filtering logic here
+        // For example, if you want to filter products with price less than or equal to a specific value:
+        return product.price <= parseFloat(price); // Assuming 'price' is a string, convert it to a number
+      });
+    }
     
     // filter by shipping
-    if (shipping) {
-      /**
-       * TODO
-       */
-    }
+if (shipping) {
+  tempProducts = tempProducts.filter((product) => {
+    // Add your shipping filtering logic here
+    // For example, if 'shipping' is a property in each product:
+    return product.shipping === true;
+  });
+}
     return { ...state, filtered_products: tempProducts }
   }
   if (action.type === CLEAR_FILTERS) {

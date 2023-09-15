@@ -17,7 +17,6 @@ const GridView = ({ products }) => {
           id={product.id}
         />
       ))}
-      ;
     </div></section>
   );
 };

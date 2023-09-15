@@ -47,6 +47,16 @@ p {
     color: var(--clr-white);
   }
 
+.actif {
+    background: var(--clr-black);
+    color: var(--clr-white);
+
+}
+/* .btn-container .actif {
+    background: var(--clr-black);
+    color: var(--clr-white);
+  } */
+
 .btn-container button {
     background: transparent;
     border: 1px solid var(--clr-black);

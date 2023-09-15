@@ -6,10 +6,10 @@ const ProductsPage = () => {
   return (
     <main>
       <PageHero title='products' />
-      <div className='page'>
-        <div className='section-center products'>
+      <div className='page-product'>
+        <div className='products'>
           <Filters />
-          <div>
+          <div className='product-list'>
             <Sort />
             <ProductList />
           </div>

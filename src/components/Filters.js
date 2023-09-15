@@ -156,9 +156,10 @@ const Filters = () => {
 
 const Wrapper = styled.section`
   .form-control {
-    margin-bottom: 1.25rem;
+    margin-bottom: 2rem;
     h5 {
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.5 rem;
+
     }
   }
   .search-input {
@@ -173,9 +174,14 @@ const Wrapper = styled.section`
   }
 
   button {
+    width:auto;
+    height:auto;
     display: block;
-    margin: 0.25em 0;
-    padding: 0.25rem 0;
+    margin: 10px 10px 0 0;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
     text-transform: capitalize;
     background: transparent;
     border: none;

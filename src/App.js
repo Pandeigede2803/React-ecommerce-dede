@@ -1,6 +1,6 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { Navbar, Sidebar, Footer } from './components'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Navbar, Sidebar, Footer } from './components';
 import {
   Home,
   SingleProduct,
@@ -11,31 +11,32 @@ import {
   Products,
   PrivateRoute,
   AuthWrapper,
-} from './pages'
+} from './pages';
+import Login from './pages/Login';
+
 function App() {
   return (
     <AuthWrapper>
       <Router>
         <Navbar />
         <Sidebar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/Products' element={<Products />} />
-          <Route path='/SingleProductPage' element={<SingleProduct />} />
-          <Route path='/CheckoutPage' element={<Checkout />} />
-          {/* 
-          TODO :
-          Route to 
-          About, Cart, 
-          Products, SingleProduct, 
-          Checkout */}
-          <Route path='error' element={<Error />} />
-        </Routes>
+        <div className="content">
+          {/* Place the Routes here */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/products/:id" element={<SingleProduct />} />
+            <Route path="/cart" element={<Cart  />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/login" element={<Login/>} />
+            <Route path="*" element={<Error />} />
+          </Routes>
+        </div>
         <Footer />
       </Router>
     </AuthWrapper>
-  )
+  );
 }
 
-export default App
+export default App;

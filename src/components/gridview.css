@@ -7,6 +7,7 @@ img {
     display: grid;
     gap: 2rem 1.5rem;
     grid-template-columns: repeat(3, 1fr);
+
 }
 
 @media (min-width: 992px) {

@@ -9,6 +9,7 @@ const CartPage = () => {
   if (cart.length < 1) {
     return (
       <div className='page-100'>
+        <PageHero title="cart"/>
         <div className='empty'>
           <h2>Your cart is empty</h2>
           <Link to='/products' className='btn'>
@@ -19,10 +20,9 @@ const CartPage = () => {
     )
   }
   return (
-    <div className='empty-cart'>
-      <PageHero title='cart' />
+    <div className=''>
       <div className='page'>
-        <CartContent></CartContent>
+        <CartContent/>
       </div>
     </div>
   )
