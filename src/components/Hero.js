@@ -30,9 +30,12 @@ const Wrapper = styled.section`
   min-height: 60vh;
   display: grid;
   place-items: center;
+
   .img-container {
-    display: none;
+    display:inline-block;
+    margin-top:20px
   }
+
   h1 {
     font-family: 'Your Preferred Font',; /* Set your preferred font */
     display: block;
@@ -76,6 +79,7 @@ const Wrapper = styled.section`
       border-radius: var(--radius);
       display: block;
       object-fit: cover;
+      margin-bottom:5px
     }
     .accent-img {
       position: absolute;

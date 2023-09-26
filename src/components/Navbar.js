@@ -17,6 +17,11 @@ import "./navbar.css";
 const Nav = () => {
   const { openSidebar } = useProductsContext();
   const { myUser, userState, logout, login, register } = useUserContext();
+
+  const toggleSidebar = () => {
+    openSidebar();
+  };
+
   return (
     <nav className="nav">
       <div className="nav-center">
@@ -24,7 +29,7 @@ const Nav = () => {
           <Link to="/">
             <img src={logo} alt="Logo" />
           </Link>
-          <button type="button" className="nav-toggle">
+          <button type="button" className="nav-toggle" onClick={toggleSidebar}>
             <svg
               stroke="currentColor"
               fill="currentColor"
@@ -54,4 +59,5 @@ const Nav = () => {
     </nav>
   );
 };
+
 export default Nav;

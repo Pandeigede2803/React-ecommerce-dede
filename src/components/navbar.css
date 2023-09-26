@@ -151,3 +151,14 @@
       display: grid;
     }
 }
+
+/* Your existing CSS styles */
+
+/* Media query for screens with a maximum width of 768px (adjust as needed) */
+@media (max-width: 768px) {
+    /* Hide the cart buttons on small screens */
+    .cart-buttons-wrapper {
+      display: none;
+    }
+  }
+  
